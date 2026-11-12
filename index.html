@@ -3,15 +3,15 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0" />
-    <title>احادیث انسائیکلوپیڈیا - Ahadees Encyclopedia</title>
-    <meta name="description" content="Complete Ahadees Encyclopedia - All major Hadith books including Bukhari, Muslim, Tirmidhi, Abu Dawood in Urdu, Arabic and English. احادیث کا مکمل انسائیکلوپیڈیا" />
-    <meta name="keywords" content="Ahadees, Hadees, Hadith, Bukhari, Muslim, Tirmidhi, Nasai, Ibn Majah, Quran, Islamic, احادیث, حدیث, بخاری, مسلم" />
+    <title>Ø§Ø­Ø§Ø¯ÛØ« Ø§ÙØ³Ø§Ø¦ÛÚ©ÙÙÙ¾ÛÚÛØ§ - Ahadees Encyclopedia</title>
+    <meta name="description" content="Complete Ahadees Encyclopedia - All major Hadith books including Bukhari, Muslim, Tirmidhi, Abu Dawood in Urdu, Arabic and English. Ø§Ø­Ø§Ø¯ÛØ« Ú©Ø§ ÙÚ©ÙÙ Ø§ÙØ³Ø§Ø¦ÛÚ©ÙÙÙ¾ÛÚÛØ§" />
+    <meta name="keywords" content="Ahadees, Hadees, Hadith, Bukhari, Muslim, Tirmidhi, Nasai, Ibn Majah, Quran, Islamic, Ø§Ø­Ø§Ø¯ÛØ«, Ø­Ø¯ÛØ«, Ø¨Ø®Ø§Ø±Û, ÙØ³ÙÙ" />
     <meta name="author" content="Dr M Irfan Qadir Thaheem - EvEr SmArT-wOrLd" />
     <meta name="theme-color" content="#0a0003" />
 
     <!-- Open Graph -->
     <meta property="og:type" content="website" />
-    <meta property="og:title" content="احادیث انسائیکلوپیڈیا - Ahadees Encyclopedia" />
+    <meta property="og:title" content="Ø§Ø­Ø§Ø¯ÛØ« Ø§ÙØ³Ø§Ø¦ÛÚ©ÙÙÙ¾ÛÚÛØ§ - Ahadees Encyclopedia" />
     <meta property="og:description" content="Complete Ahadees Encyclopedia - All major Hadith books in Urdu, Arabic and English" />
     <meta property="og:image" content="/og-image.jpg" />
     <meta property="og:image:width" content="1200" />
@@ -20,7 +20,7 @@
 
     <!-- Twitter Card -->
     <meta name="twitter:card" content="summary_large_image" />
-    <meta name="twitter:title" content="احادیث انسائیکلوپیڈیا - Ahadees Encyclopedia" />
+    <meta name="twitter:title" content="Ø§Ø­Ø§Ø¯ÛØ« Ø§ÙØ³Ø§Ø¦ÛÚ©ÙÙÙ¾ÛÚÛØ§ - Ahadees Encyclopedia" />
     <meta name="twitter:description" content="Complete Ahadees Encyclopedia - All major Hadith books in Urdu, Arabic and English" />
 
     <!-- PWA / Mobile -->
@@ -38,7 +38,7 @@
       "@context": "https://schema.org",
       "@type": "WebApplication",
       "name": "Ahadees Encyclopedia",
-      "alternateName": "احادیث انسائیکلوپیڈیا",
+      "alternateName": "Ø§Ø­Ø§Ø¯ÛØ« Ø§ÙØ³Ø§Ø¦ÛÚ©ÙÙÙ¾ÛÚÛØ§",
       "url": "https://www.onspace.ai",
       "description": "Complete Ahadees Encyclopedia with all major Hadith books in Urdu, Arabic and English",
       "author": {
@@ -59,5 +59,54 @@
   <body>
     <div id="root"></div>
     <script type="module" src="/src/main.tsx"></script>
-  </body>
+  <script>/* DeployHub badge clearance */
+(function(){
+  if(window.__nhBadgeSafe)return;window.__nhBadgeSafe=1;
+  function findBadge(){
+    var nodes=document.querySelectorAll('a,iframe,div'),i,el,st,r;
+    for(i=0;i<nodes.length;i++){
+      el=nodes[i];st=getComputedStyle(el);
+      if(st.position!=='fixed'&&st.position!=='sticky')continue;
+      if(st.display==='none'||st.visibility==='hidden'||+st.opacity===0)continue;
+      r=el.getBoundingClientRect();
+      if(r.width<60||r.height<18||r.width>320||r.height>120)continue;
+      if(r.bottom>window.innerHeight-56&&r.right>window.innerWidth-56)return {el:el,w:r.width,h:r.height};
+    }
+    return null;
+  }
+  var settled=false;
+  function clear(){
+    if(settled)return;
+    var badge=findBadge();
+    if(!badge)return;
+    settled=true;
+    var pad=Math.ceil(badge.w)+14;
+    var bars=[],all=document.querySelectorAll('body *'),i,el,st,r;
+    for(i=0;i<all.length;i++){
+      el=all[i];st=getComputedStyle(el);
+      if(st.position!=='fixed'&&st.position!=='sticky')continue;
+      if(st.display==='none'||st.visibility==='hidden')continue;
+      r=el.getBoundingClientRect();
+      if(r.height<=120&&r.width>window.innerWidth*0.5&&r.bottom>window.innerHeight-28)bars.push(el);
+    }
+    if(bars.length){
+      for(i=0;i<bars.length;i++){
+        var cur=parseFloat(getComputedStyle(bars[i]).paddingRight)||0;
+        bars[i].style.paddingRight=(cur+pad)+'px';
+        bars[i].style.boxSizing='border-box';
+      }
+    } else {
+      var body=getComputedStyle(document.body);
+      document.body.style.paddingBottom=((parseFloat(body.paddingBottom)||0)+Math.ceil(badge.h)+10)+'px';
+    }
+  }
+  ['load','resize','orientationchange'].forEach(function(event){window.addEventListener(event,clear);});
+  document.addEventListener('DOMContentLoaded',clear);
+  setTimeout(clear,700);setTimeout(clear,2200);
+  var timer;
+  var schedule=function(){clearTimeout(timer);timer=setTimeout(clear,300);};
+  new MutationObserver(schedule).observe(document.documentElement,{childList:true,subtree:true});
+})();
+</script>
+</body>
 </html>
